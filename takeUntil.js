@@ -6,10 +6,8 @@
 const takeUntil = function(array, callback) {
   const result = [];
   for (let x of array) {
-    if (callback(x) === false) {
+    if (!callback(x)) {
       result.push(x);
-    } else {
-      break;
     }
   }
   return result;
