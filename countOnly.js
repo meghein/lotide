@@ -16,11 +16,13 @@ const countOnly = function(allItems, itemsToCount) {
       namesArr.push(item);
     }
   }
+  // i === firstname
   for (let i of allItems) {
     if (namesArr.includes(i)) {
       if (namesObj[i]) {
         namesObj[i] += 1;
       } else {
+        // needed it because it was undefined
         namesObj[i] = 1;
       }
     }
